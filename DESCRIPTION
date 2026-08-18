@@ -1,0 +1,21 @@
+Package: scrubadub
+Title: Pre- and Post-Filtering UMAPs for Doublet and Low-Quality Cell Removal
+Version: 0.1.0
+Authors@R: person("Benno", "Orr", email = "borr@broadinstitute.org", role = c("aut", "cre"))
+Description: Given a raw-cell PCA embedding and the same embedding refit
+    after QC filtering, scrubadub lays out a UMAP of all raw cells (colored
+    by why a cell was later dropped: flagged doublet vs. low-quality) next
+    to a UMAP of the cells that survive both filters. Intended as a quick,
+    honest before/after check on a doublet- or QC-filtering step, not a
+    doublet caller itself -- bring your own doublet flag and keep/drop flag.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+    ggplot2,
+    patchwork,
+    uwot
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
